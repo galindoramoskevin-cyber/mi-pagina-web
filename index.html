@@ -1,54 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Terrraza de Eventos Gibos</title>
- <link rel="stylesheet" href="css/style.css">
-
+  <title>Terraza de Eventos Gibos</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-  <section class="hero">
+<!-- HERO -->
+<section class="hero">
   <div class="hero-content">
     <h1>Terraza de Eventos Gibos</h1>
     <p>El espacio perfecto para tus momentos inolvidables</p>
-   <a href="#reserva" class="btn">Solicitar fecha</a>
+    <a href="#reserva" class="btn">Solicitar fecha</a>
   </div>
 </section>
+
+<!-- RESERVA -->
 <section id="reserva" class="reserva">
   <h2>Solicitar reserva</h2>
   <p>Completa el formulario y nos pondremos en contacto contigo</p>
-</section>
-<script>
-function enviarWhatsApp() {
-  let nombre = document.getElementById("nombre").value;
-  let telefono = document.getElementById("telefono").value;
-  let email = document.getElementById("email").value;
-  let evento = document.getElementById("evento").value;
-  let fecha = document.getElementById("fecha").value;
-  let hora = document.getElementById("hora").value;
-  let mensaje = document.getElementById("mensaje").value;
 
-let texto = `Hola, quiero reservar:
+  <form onsubmit="event.preventDefault(); enviarWhatsApp();">
 
-Nombre: ${nombre}
-Teléfono: ${telefono}
-Email: ${email}
-Evento: ${evento}
-Fecha: ${fecha}
-Hora: ${hora}
-Mensaje: ${mensaje}`;
+    <input type="text" id="nombre" placeholder="Nombre" required>
+    <input type="tel" id="telefono" placeholder="Teléfono" required>
+    <input type="email" id="email" placeholder="Email" required>
 
+    <input type="text" id="evento" placeholder="Tipo de evento">
 
-let url = "https://wa.me/5213326041925?text=" + encodeURIComponent(texto);
+    <input type="date" id="fecha" required>
+    <input type="time" id="hora">
 
-  window.open(url, "_blank");
-}
-</script>
+    <textarea id="mensaje" placeholder="Mensaje adicional"></textarea>
 
-</body>
-</html>
+    <button type="submit">Enviar por WhatsApp</button>
+
+  </form>
 </section>
 
+<!-- SCRIPT -->
 <script>
 function enviarWhatsApp() {
 
@@ -75,7 +66,6 @@ Mensaje: ${mensaje}`;
   window.open(url, "_blank");
 }
 </script>
-
 
 </body>
 </html>
