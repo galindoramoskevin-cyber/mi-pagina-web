@@ -8,7 +8,10 @@ body {
 /* HERO SECTION */
 .hero {
   height: 100vh;
-background: url('../terraza.jpg') center/cover no-repeat;
+background: 
+  linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),
+  url('../terraza.jpg') center/cover no-repeat;
+background-position: center 30%;
   display: flex;
   align-items: center;
   justify-content: center;
