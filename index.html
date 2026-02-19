@@ -18,6 +18,63 @@
   <h2>Solicitar reserva</h2>
   <p>Completa el formulario y nos pondremos en contacto contigo</p>
 </section>
+<script>
+function enviarWhatsApp() {
+  let nombre = document.getElementById("nombre").value;
+  let telefono = document.getElementById("telefono").value;
+  let email = document.getElementById("email").value;
+  let evento = document.getElementById("evento").value;
+  let fecha = document.getElementById("fecha").value;
+  let hora = document.getElementById("hora").value;
+  let mensaje = document.getElementById("mensaje").value;
+
+let texto = `Hola, quiero reservar:
+
+Nombre: ${nombre}
+Teléfono: ${telefono}
+Email: ${email}
+Evento: ${evento}
+Fecha: ${fecha}
+Hora: ${hora}
+Mensaje: ${mensaje}`;
+
+
+let url = "https://wa.me/5213326041925?text=" + encodeURIComponent(texto);
+
+  window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
+</section>
+
+<script>
+function enviarWhatsApp() {
+
+  let nombre = document.getElementById("nombre").value;
+  let telefono = document.getElementById("telefono").value;
+  let email = document.getElementById("email").value;
+  let evento = document.getElementById("evento").value;
+  let fecha = document.getElementById("fecha").value;
+  let hora = document.getElementById("hora").value;
+  let mensaje = document.getElementById("mensaje").value;
+
+  let texto = `Hola, quiero reservar:
+
+Nombre: ${nombre}
+Teléfono: ${telefono}
+Email: ${email}
+Evento: ${evento}
+Fecha: ${fecha}
+Hora: ${hora}
+Mensaje: ${mensaje}`;
+
+  let url = "https://wa.me/5213326041925?text=" + encodeURIComponent(texto);
+
+  window.open(url, "_blank");
+}
+</script>
 
 
 </body>
