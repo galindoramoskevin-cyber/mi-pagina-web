@@ -208,3 +208,16 @@ form button {
   max-width: 650px; /* 🔥 controlas tamaño */
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
+
+/* ANIMACIÓN BASE */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+/* CUANDO APARECE */
+.fade-up.active {
+  opacity: 1;
+  transform: translateY(0);
+}
