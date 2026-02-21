@@ -137,6 +137,12 @@ body {
   transform: translateY(-5px);
 }
 
+/* Mensaje */
+.Mensaje {
+  padding: 80px 20px;
+  text-align: center;
+}
+
 /* FORMULARIO PRO */
 .reserva {
   padding: 80px 20px;
