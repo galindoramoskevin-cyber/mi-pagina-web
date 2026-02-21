@@ -82,21 +82,28 @@
 
   <form onsubmit="event.preventDefault(); enviarWhatsApp();">
 
-    <input type="text" id="nombre" placeholder="Nombre" required>
-    <input type="tel" id="telefono" placeholder="Teléfono" required>
-    <input type="email" id="email" placeholder="Email">
+    <div class="form-group">
+      <input type="text" id="nombre" placeholder="Nombre completo" required>
+      <input type="tel" id="telefono" placeholder="Teléfono" required>
+    </div>
 
-    <input type="text" id="evento" placeholder="Tipo de evento">
+    <div class="form-group">
+      <input type="email" id="email" placeholder="Correo electrónico" required>
+      <input type="text" id="evento" placeholder="Tipo de evento">
+    </div>
 
-    <input type="date" id="fecha" required>
-    <input type="time" id="hora">
+    <div class="form-group">
+      <input type="date" id="fecha" required>
+      <input type="time" id="hora">
+    </div>
 
     <textarea id="mensaje" placeholder="Mensaje adicional"></textarea>
 
-    <button type="submit">Enviar por WhatsApp</button>
+    <button type="submit" class="btn">Enviar por WhatsApp</button>
 
   </form>
 </section>
+
 
 <!-- SCRIPT -->
 <script>
