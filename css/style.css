@@ -138,3 +138,55 @@ body {
   transform: translateY(-5px);
 }
 
+/* FORMULARIO PRO */
+.reserva {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.reserva form {
+  background: #1a1a1a;
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 700px;
+  margin: 40px auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* filas del form */
+.form-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+/* inputs */
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  background: #2a2a2a;
+  color: white;
+  font-size: 14px;
+}
+
+/* textarea ocupa todo */
+textarea {
+  margin-top: 10px;
+  min-height: 100px;
+}
+
+/* botón */
+form button {
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .form-group {
+    grid-template-columns: 1fr;
+  }
+}
