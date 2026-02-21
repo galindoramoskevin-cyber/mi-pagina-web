@@ -5,6 +5,21 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
+  <script>
+const elementos = document.querySelectorAll('.fade-up');
+
+function mostrarElementos() {
+  elementos.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      el.classList.add('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', mostrarElementos);
+</script>
+  
 <body>
 
 <!-- HERO -->
@@ -135,3 +150,8 @@ Mensaje: ${mensaje}`;
 
 </body>
 </html>
+
+<section class="galeria fade-up">
+<section class="sobre fade-up">
+<section class="extras fade-up">
+<section id="reserva" class="reserva fade-up">
