@@ -135,13 +135,16 @@ text-align:center;
 
 .extra-card {
   background: #1f1f1f;
+  color: white;
   padding: 20px;
   border-radius: 10px;
   transition: 0.3s;
+  font-size: 18px;
 }
 
 .extra-card:hover {
   transform: translateY(-5px);
+  background: #2a2a2a;
 }
 
 /* Mensaje */
