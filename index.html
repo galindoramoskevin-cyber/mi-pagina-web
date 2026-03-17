@@ -2,9 +2,10 @@
 <html>
 <head>
 <title>Terraza de Eventos Gibos</title>
-<link rel="stylesheet" href="css/style.css">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -13,7 +14,7 @@
 <nav class="navbar">
   <div class="logo">Gibos</div>
   <ul>
-    <li><a href="#">Inicio</a></li>
+    <li><a href="#top">Inicio</a></li>
     <li><a href="#galeria">Galería</a></li>
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#extras">Servicios</a></li>
@@ -23,7 +24,7 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero">
+<section id="top" class="hero">
   <div class="hero-content">
     <h1>Terraza de Eventos Gibos</h1>
     <p>El espacio perfecto para tus momentos inolvidables</p>
@@ -31,22 +32,20 @@
   </div>
 </section>
 
-
 <!-- GALERIA -->
 <section id="galeria" class="galeria fade-up">
 <h2>Galería</h2>
 
 <div class="galeria-grid">
-<img src="terraza.jpg">
-<img src="terraza 2.jpeg">
-<img src="terraza 3.jpeg">
-<img src="terraza 4.jpeg">
-<img src="terraza 5.jpeg">
-<img src="terraza 6.jpeg">
+<img src="terraza.jpg" alt="Terraza 1">
+<img src="terraza 2.jpeg" alt="Terraza 2">
+<img src="terraza 3.jpeg" alt="Terraza 3">
+<img src="terraza 4.jpeg" alt="Terraza 4">
+<img src="terraza 5.jpeg" alt="Terraza 5">
+<img src="terraza 6.jpeg" alt="Terraza 6">
 </div>
 
 </section>
-
 
 <!-- SOBRE -->
 <section id="sobre" class="sobre fade-up">
@@ -70,12 +69,11 @@ momentos inolvidables.
 </div>
 
 <div class="sobre-img">
-<img src="terraza 6.jpeg">
+<img src="terraza 6.jpeg" alt="Terraza">
 </div>
 
 </div>
 </section>
-
 
 <!-- CONFIANZA -->
 <section class="stats fade-up">
@@ -88,7 +86,6 @@ momentos inolvidables.
 </div>
 
 </section>
-
 
 <!-- SERVICIOS -->
 <section id="extras" class="extras fade-up">
@@ -105,7 +102,6 @@ momentos inolvidables.
 
 </section>
 
-
 <!-- TESTIMONIOS -->
 <section class="testimonios fade-up">
 <h2>Lo que dicen nuestros clientes</h2>
@@ -118,7 +114,6 @@ momentos inolvidables.
 
 </section>
 
-
 <!-- UBICACION -->
 <section id="ubicacion" class="ubicacion fade-up">
 <h2>Ubicación</h2>
@@ -128,11 +123,19 @@ Tlaquepaque, Jalisco
 </p>
 
 <div class="mapa">
-<iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="350"></iframe>
+
+<iframe 
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d233.44611426984986!2d-103.33138313144445!3d20.582428253574303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b2c8dfb697cb%3A0x98973efbe0dd3f8f!2sTerraza%20De%20Gibo'S!5e0!3m2!1sen!2smx!4v1773330521482!5m2!1sen!2smx"
+width="100%"
+height="350"
+style="border:0;"
+allowfullscreen=""
+loading="lazy">
+</iframe>
+
 </div>
 
 </section>
-
 
 <!-- RESERVA -->
 <section id="reserva" class="reserva fade-up">
@@ -142,13 +145,13 @@ Tlaquepaque, Jalisco
 <form onsubmit="event.preventDefault(); enviarWhatsApp();">
 
 <div class="form-group">
-<input type="text" id="nombre" placeholder="Nombre" required>
+<input type="text" id="nombre" placeholder="Nombre completo" required>
 <input type="tel" id="telefono" placeholder="Teléfono" required>
 </div>
 
 <div class="form-group">
 <input type="email" id="email" placeholder="Email" required>
-<input type="text" id="evento" placeholder="Evento">
+<input type="text" id="evento" placeholder="Tipo de evento">
 </div>
 
 <div class="form-group">
@@ -156,14 +159,13 @@ Tlaquepaque, Jalisco
 <input type="time" id="hora">
 </div>
 
-<textarea id="mensaje" placeholder="Mensaje"></textarea>
+<textarea id="mensaje" placeholder="Mensaje adicional"></textarea>
 
 <button type="submit" class="btn">Enviar</button>
 
 </form>
 
 </section>
-
 
 <!-- FOOTER -->
 <footer class="footer">
@@ -173,24 +175,54 @@ Tlaquepaque, Jalisco
 <p>© 2026</p>
 </footer>
 
-
-<!-- WHATSAPP -->
+<!-- BOTON WHATSAPP -->
 <a href="https://wa.me/5213326041925" class="whatsapp-float" target="_blank">
 📱
 </a>
 
-
-<!-- SCRIPTS -->
+<!-- SCRIPT WHATSAPP -->
 <script>
 function enviarWhatsApp(){
+
 let nombre = document.getElementById("nombre").value;
 let telefono = document.getElementById("telefono").value;
+let email = document.getElementById("email").value;
+let evento = document.getElementById("evento").value;
+let fecha = document.getElementById("fecha").value;
+let hora = document.getElementById("hora").value;
+let mensaje = document.getElementById("mensaje").value;
 
-let texto = `Hola, quiero reservar:\nNombre: ${nombre}\nTeléfono: ${telefono}`;
+let texto = `Hola, quiero reservar:
+
+Nombre: ${nombre}
+Teléfono: ${telefono}
+Email: ${email}
+Evento: ${evento}
+Fecha: ${fecha}
+Hora: ${hora}
+Mensaje: ${mensaje}`;
+
 let url = "https://wa.me/5213326041925?text=" + encodeURIComponent(texto);
 
 window.open(url,"_blank");
 }
+</script>
+
+<!-- ANIMACIONES -->
+<script>
+const elementos = document.querySelectorAll('.fade-up');
+
+function mostrarElementos(){
+  elementos.forEach(el=>{
+    const rect = el.getBoundingClientRect();
+    if(rect.top < window.innerHeight - 100){
+      el.classList.add('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', mostrarElementos);
+window.addEventListener('load', mostrarElementos);
 </script>
 
 </body>
