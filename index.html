@@ -3,9 +3,24 @@
 <head>
 <title>Terraza de Eventos Gibos</title>
 <link rel="stylesheet" href="css/style.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">Gibos</div>
+  <ul>
+    <li><a href="#">Inicio</a></li>
+    <li><a href="#galeria">Galería</a></li>
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#extras">Servicios</a></li>
+    <li><a href="#ubicacion">Ubicación</a></li>
+    <li><a href="#reserva">Reservar</a></li>
+  </ul>
+</nav>
 
 <!-- HERO -->
 <section class="hero">
@@ -18,7 +33,7 @@
 
 
 <!-- GALERIA -->
-<section class="galeria fade-up">
+<section id="galeria" class="galeria fade-up">
 <h2>Galería</h2>
 
 <div class="galeria-grid">
@@ -33,9 +48,8 @@
 </section>
 
 
-<!-- SOBRE NOSOTROS -->
-<section class="sobre fade-up">
-
+<!-- SOBRE -->
+<section id="sobre" class="sobre fade-up">
 <div class="sobre-container">
 
 <div class="sobre-texto">
@@ -43,15 +57,14 @@
 
 <p>
 Terraza de Eventos Gibos es un espacio íntimo y elegante diseñado para crear
-momentos inolvidables. Ofrecemos un ambiente exclusivo ideal para bodas,
-cumpleaños y celebraciones especiales.
+momentos inolvidables.
 </p>
 
 <ul class="sobre-lista">
 <li>✔ Capacidad de 50 a 150 personas</li>
-<li>✔ Ambiente elegante e íntimo</li>
+<li>✔ Ambiente elegante</li>
 <li>✔ Ubicación accesible</li>
-<li>✔ Espacio adaptable a cualquier evento</li>
+<li>✔ Espacio adaptable</li>
 </ul>
 
 </div>
@@ -61,19 +74,24 @@ cumpleaños y celebraciones especiales.
 </div>
 
 </div>
-
 </section>
 
 
-<!-- MENSAJE -->
-<section class="mensaje fade-up">
-<h3>Pregunte por el de su interes, mas informacion via whatsapp...</h3>
+<!-- CONFIANZA -->
+<section class="stats fade-up">
+<h2>Nuestro compromiso</h2>
+
+<div class="stats-grid">
+<div>+200 eventos realizados</div>
+<div>+5 años de experiencia</div>
+<div>100% clientes satisfechos</div>
+</div>
+
 </section>
 
 
 <!-- SERVICIOS -->
-<section class="extras fade-up">
-
+<section id="extras" class="extras fade-up">
 <h2>Servicios Extras</h2>
 
 <div class="extras-grid">
@@ -88,124 +106,91 @@ cumpleaños y celebraciones especiales.
 </section>
 
 
-<!-- UBICACION -->
-<section class="ubicacion fade-up">
+<!-- TESTIMONIOS -->
+<section class="testimonios fade-up">
+<h2>Lo que dicen nuestros clientes</h2>
 
-<h2>Ubicación</h2>
-
-<p>
-Terraza de Eventos Gibo's<br>
-Tlaquepaque, Jalisco
-</p>
-
-<div class="mapa">
-
-<iframe
-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d233.44611426984986!2d-103.33138313144445!3d20.582428253574303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b2c8dfb697cb%3A0x98973efbe0dd3f8f!2sTerraza%20De%20Gibo'S!5e0!3m2!1sen!2smx!4v1773330521482!5m2!1sen!2smx"
-width="100%"
-height="350"
-style="border:0;"
-allowfullscreen=""
-loading="lazy">
-</iframe>
-
+<div class="test-grid">
+<div class="test-card">★★★★★<br>"Todo salió perfecto"<br>- Mariana</div>
+<div class="test-card">★★★★★<br>"Lugar hermoso y elegante"<br>- Carlos</div>
+<div class="test-card">★★★★★<br>"Excelente servicio"<br>- Ana</div>
 </div>
 
 </section>
 
 
-<!-- FORMULARIO RESERVA -->
+<!-- UBICACION -->
+<section id="ubicacion" class="ubicacion fade-up">
+<h2>Ubicación</h2>
+
+<p>
+Tlaquepaque, Jalisco
+</p>
+
+<div class="mapa">
+<iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="350"></iframe>
+</div>
+
+</section>
+
+
+<!-- RESERVA -->
 <section id="reserva" class="reserva fade-up">
 
 <h2>Solicitar reserva</h2>
-<p>Completa el formulario y nos pondremos en contacto contigo</p>
 
 <form onsubmit="event.preventDefault(); enviarWhatsApp();">
 
 <div class="form-group">
-<input type="text" id="nombre" placeholder="Nombre completo" required>
+<input type="text" id="nombre" placeholder="Nombre" required>
 <input type="tel" id="telefono" placeholder="Teléfono" required>
 </div>
 
 <div class="form-group">
-<input type="email" id="email" placeholder="Correo electrónico" required>
-<input type="text" id="evento" placeholder="Tipo de evento">
+<input type="email" id="email" placeholder="Email" required>
+<input type="text" id="evento" placeholder="Evento">
 </div>
 
 <div class="form-group">
-<input type="date" id="fecha" required>
+<input type="date" id="fecha">
 <input type="time" id="hora">
 </div>
 
-<textarea id="mensaje" placeholder="Mensaje adicional"></textarea>
+<textarea id="mensaje" placeholder="Mensaje"></textarea>
 
-<button type="submit" class="btn">Enviar por WhatsApp</button>
+<button type="submit" class="btn">Enviar</button>
 
 </form>
 
 </section>
 
 
-<!-- BOTON WHATSAPP -->
+<!-- FOOTER -->
+<footer class="footer">
+<h3>Terraza de Eventos Gibos</h3>
+<p>📍 Tlaquepaque, Jalisco</p>
+<p>📞 WhatsApp: 33 2604 1925</p>
+<p>© 2026</p>
+</footer>
+
+
+<!-- WHATSAPP -->
 <a href="https://wa.me/5213326041925" class="whatsapp-float" target="_blank">
 📱
 </a>
 
 
-<!-- SCRIPT WHATSAPP -->
+<!-- SCRIPTS -->
 <script>
-
 function enviarWhatsApp(){
-
 let nombre = document.getElementById("nombre").value;
 let telefono = document.getElementById("telefono").value;
-let email = document.getElementById("email").value;
-let evento = document.getElementById("evento").value;
-let fecha = document.getElementById("fecha").value;
-let hora = document.getElementById("hora").value;
-let mensaje = document.getElementById("mensaje").value;
 
-let texto = `Hola, quiero reservar:
-
-Nombre: ${nombre}
-Teléfono: ${telefono}
-Email: ${email}
-Evento: ${evento}
-Fecha: ${fecha}
-Hora: ${hora}
-Mensaje: ${mensaje}`;
-
+let texto = `Hola, quiero reservar:\nNombre: ${nombre}\nTeléfono: ${telefono}`;
 let url = "https://wa.me/5213326041925?text=" + encodeURIComponent(texto);
 
 window.open(url,"_blank");
-
 }
-
-</script>
-
-
-<!-- SCRIPT ANIMACION -->
-<script>
-
-const elementos = document.querySelectorAll('.fade-up');
-
-function mostrarElementos(){
-
-elementos.forEach(el=>{
-
-const rect = el.getBoundingClientRect();
-
-if(rect.top < window.innerHeight - 100){
-el.classList.add('active');
-}
-
-});
-
-}
-
-window.addEventListener('scroll', mostrarElementos);
-window.addEventListener('load', mostrarElementos);
-
 </script>
 
 </body>
