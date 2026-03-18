@@ -461,36 +461,30 @@ padding:10px 30px;
 }
 
 /* LIGHTBOX */
-<script>
-function abrirLightbox(img){
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
-
-  if(lightbox && lightboxImg){
-    lightbox.style.display = "flex";
-    lightboxImg.src = img.src;
-  }
-}
-
-// cerrar con botón
-const cerrarBtn = document.querySelector(".cerrar");
-if(cerrarBtn){
-  cerrarBtn.addEventListener("click", function(){
-    document.getElementById("lightbox").style.display = "none";
-  });
-}
-
-// cerrar al fondo
-const fondo = document.getElementById("lightbox");
-if(fondo){
-  fondo.addEventListener("click", function(e){
-    if(e.target.id === "lightbox"){
-      this.style.display = "none";
-    }
-  });
-}
-</script>
-
 .lightbox{
-display:flex !important;
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+.lightbox img{
+max-width:90%;
+max-height:80%;
+border-radius:10px;
+}
+
+.cerrar{
+position:absolute;
+top:30px;
+right:40px;
+font-size:40px;
+color:white;
+cursor:pointer;
 }
