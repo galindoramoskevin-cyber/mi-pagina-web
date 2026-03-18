@@ -490,3 +490,7 @@ if(fondo){
   });
 }
 </script>
+
+.lightbox{
+display:flex !important;
+}
