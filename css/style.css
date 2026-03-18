@@ -459,40 +459,34 @@ background:rgba(255,255,255,0.95);
 box-shadow:0 5px 20px rgba(0,0,0,0.1);
 padding:10px 30px;
 }
+
 /* LIGHTBOX */
-.lightbox{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.9);
+<script>
+function abrirLightbox(img){
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
 
-display:none;
-align-items:center;
-justify-content:center;
-
-z-index:2000;
+  if(lightbox && lightboxImg){
+    lightbox.style.display = "flex";
+    lightboxImg.src = img.src;
+  }
 }
 
-.lightbox-img{
-max-width:90%;
-max-height:90%;
-border-radius:10px;
-box-shadow:0 20px 50px rgba(0,0,0,0.5);
+// cerrar con botón
+const cerrarBtn = document.querySelector(".cerrar");
+if(cerrarBtn){
+  cerrarBtn.addEventListener("click", function(){
+    document.getElementById("lightbox").style.display = "none";
+  });
 }
 
-/* botón cerrar */
-.cerrar{
-position:absolute;
-top:30px;
-right:40px;
-font-size:40px;
-color:white;
-cursor:pointer;
-transition:0.3s;
+// cerrar al fondo
+const fondo = document.getElementById("lightbox");
+if(fondo){
+  fondo.addEventListener("click", function(e){
+    if(e.target.id === "lightbox"){
+      this.style.display = "none";
+    }
+  });
 }
-
-.cerrar:hover{
-color:#ccc;
-}
+</script>
