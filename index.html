@@ -8,26 +8,6 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 
-  <script>
-function abrirLightbox(img){
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
-
-  lightbox.style.display = "flex";
-  lightboxImg.src = img.src;
-}
-
-document.querySelector(".cerrar").onclick = function(){
-  document.getElementById("lightbox").style.display = "none";
-};
-
-document.getElementById("lightbox").onclick = function(e){
-  if(e.target.id === "lightbox"){
-    this.style.display = "none";
-  }
-};
-</script>
-  
 <body>
 
 <!-- NAVBAR -->
@@ -52,19 +32,17 @@ document.getElementById("lightbox").onclick = function(e){
   </div>
 </section>
 
-<!-- GALERIA 🔥 YA CON LIGHTBOX -->
+<!-- GALERIA -->
 <section id="galeria" class="galeria fade-up">
 <h2>Galería</h2>
 
 <div class="galeria-grid">
-
-<div><img src="terraza.jpg" onclick="abrirLightbox(this)" alt="Terraza 1"></div>
-<div><img src="terraza 2.jpeg" onclick="abrirLightbox(this)" alt="Terraza 2"></div>
-<div><img src="terraza 3.jpeg" onclick="abrirLightbox(this)" alt="Terraza 3"></div>
-<div><img src="terraza 4.jpeg" onclick="abrirLightbox(this)" alt="Terraza 4"></div>
-<div><img src="terraza 5.jpeg" onclick="abrirLightbox(this)" alt="Terraza 5"></div>
-<div><img src="terraza 6.jpeg" onclick="abrirLightbox(this)" alt="Terraza 6"></div>
-
+<div><img src="terraza.jpg" onclick="abrirLightbox(this)"></div>
+<div><img src="terraza 2.jpeg" onclick="abrirLightbox(this)"></div>
+<div><img src="terraza 3.jpeg" onclick="abrirLightbox(this)"></div>
+<div><img src="terraza 4.jpeg" onclick="abrirLightbox(this)"></div>
+<div><img src="terraza 5.jpeg" onclick="abrirLightbox(this)"></div>
+<div><img src="terraza 6.jpeg" onclick="abrirLightbox(this)"></div>
 </div>
 
 </section>
@@ -91,22 +69,10 @@ momentos inolvidables.
 </div>
 
 <div class="sobre-img">
-<img src="terraza 6.jpeg" alt="Terraza">
+<img src="terraza 6.jpeg">
 </div>
 
 </div>
-</section>
-
-<!-- CONFIANZA -->
-<section class="stats fade-up">
-<h2>Nuestro compromiso</h2>
-
-<div class="stats-grid">
-<div>+200 eventos realizados</div>
-<div>+5 años de experiencia</div>
-<div>100% clientes satisfechos</div>
-</div>
-
 </section>
 
 <!-- SERVICIOS -->
@@ -124,32 +90,14 @@ momentos inolvidables.
 
 </section>
 
-<!-- TESTIMONIOS -->
-<section class="testimonios fade-up">
-<h2>Lo que dicen nuestros clientes</h2>
-
-<div class="test-grid">
-<div class="test-card">★★★★★<br>"Todo salió perfecto"<br>- Mariana</div>
-<div class="test-card">★★★★★<br>"Lugar hermoso y elegante"<br>- Carlos</div>
-<div class="test-card">★★★★★<br>"Excelente servicio"<br>- Ana</div>
-</div>
-
-</section>
-
 <!-- UBICACION -->
 <section id="ubicacion" class="ubicacion fade-up">
 <h2>Ubicación</h2>
 
-<p>Tlaquepaque, Jalisco</p>
-
 <div class="mapa">
 <iframe 
-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d233.44611426984986!2d-103.33138313144445!3d20.582428253574303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b2c8dfb697cb%3A0x98973efbe0dd3f8f!2sTerraza%20De%20Gibo'S!5e0!3m2!1sen!2smx!4v1773330521482!5m2!1sen!2smx"
-width="100%"
-height="350"
-style="border:0;"
-allowfullscreen=""
-loading="lazy">
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d233.44611426984986!2d-103.33138313144445!3d20.582428253574303"
+width="100%" height="350" style="border:0;">
 </iframe>
 </div>
 
@@ -185,18 +133,10 @@ loading="lazy">
 
 </section>
 
-<!-- FOOTER -->
-<footer class="footer">
-<h3>Terraza de Eventos Gibos</h3>
-<p>📍 Tlaquepaque, Jalisco</p>
-<p>📞 WhatsApp: 33 2604 1925</p>
-<p>© 2026</p>
-</footer>
-
-<!-- LIGHTBOX 🔥 -->
+<!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox">
   <span class="cerrar">&times;</span>
-  <img class="lightbox-img" id="lightbox-img">
+  <img id="lightbox-img">
 </div>
 
 <!-- WHATSAPP -->
@@ -204,21 +144,12 @@ loading="lazy">
 📱
 </a>
 
-<!-- NAVBAR SCROLL -->
-<script>
-window.addEventListener("scroll", function(){
-const navbar = document.querySelector(".navbar");
+<!-- SCRIPTS (TODOS ABAJO 🔥) -->
 
-if(window.scrollY > 50){
-navbar.classList.add("scrolled");
-}else{
-navbar.classList.remove("scrolled");
-}
-});
-</script>
-
-<!-- LIGHTBOX SCRIPT 🔥 -->
 <script>
+// LIGHTBOX
+window.addEventListener("load", function(){
+
 function abrirLightbox(img){
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
@@ -226,6 +157,8 @@ function abrirLightbox(img){
   lightbox.style.display = "flex";
   lightboxImg.src = img.src;
 }
+
+window.abrirLightbox = abrirLightbox;
 
 document.querySelector(".cerrar").onclick = function(){
   document.getElementById("lightbox").style.display = "none";
@@ -236,50 +169,19 @@ document.getElementById("lightbox").onclick = function(e){
     this.style.display = "none";
   }
 };
-</script>
 
-<!-- WHATSAPP -->
-<script>
+});
+
+// WHATSAPP
 function enviarWhatsApp(){
 let nombre = document.getElementById("nombre").value;
 let telefono = document.getElementById("telefono").value;
-let email = document.getElementById("email").value;
-let evento = document.getElementById("evento").value;
-let fecha = document.getElementById("fecha").value;
-let hora = document.getElementById("hora").value;
-let mensaje = document.getElementById("mensaje").value;
 
-let texto = `Hola, quiero reservar:
-
-Nombre: ${nombre}
-Teléfono: ${telefono}
-Email: ${email}
-Evento: ${evento}
-Fecha: ${fecha}
-Hora: ${hora}
-Mensaje: ${mensaje}`;
-
+let texto = `Hola, quiero reservar:\nNombre: ${nombre}\nTeléfono: ${telefono}`;
 let url = "https://wa.me/5213326041925?text=" + encodeURIComponent(texto);
 
 window.open(url,"_blank");
 }
-</script>
-
-<!-- ANIMACIONES -->
-<script>
-const elementos = document.querySelectorAll('.fade-up');
-
-function mostrarElementos(){
-elementos.forEach(el=>{
-const rect = el.getBoundingClientRect();
-if(rect.top < window.innerHeight - 100){
-el.classList.add('active');
-}
-});
-}
-
-window.addEventListener('scroll', mostrarElementos);
-window.addEventListener('load', mostrarElementos);
 </script>
 
 </body>
