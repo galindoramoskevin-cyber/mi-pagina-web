@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html>
 <head>
 <title>Terraza de Eventos Gibos</title>
@@ -32,18 +32,18 @@
   </div>
 </section>
 
-<!-- GALERIA (CORREGIDA 🔥) -->
+<!-- GALERIA 🔥 YA CON LIGHTBOX -->
 <section id="galeria" class="galeria fade-up">
 <h2>Galería</h2>
 
 <div class="galeria-grid">
 
-<div><img src="terraza.jpg" alt="Terraza 1"></div>
-<div><img src="terraza 2.jpeg" alt="Terraza 2"></div>
-<div><img src="terraza 3.jpeg" alt="Terraza 3"></div>
-<div><img src="terraza 4.jpeg" alt="Terraza 4"></div>
-<div><img src="terraza 5.jpeg" alt="Terraza 5"></div>
-<div><img src="terraza 6.jpeg" alt="Terraza 6"></div>
+<div><img src="terraza.jpg" onclick="abrirLightbox(this)" alt="Terraza 1"></div>
+<div><img src="terraza 2.jpeg" onclick="abrirLightbox(this)" alt="Terraza 2"></div>
+<div><img src="terraza 3.jpeg" onclick="abrirLightbox(this)" alt="Terraza 3"></div>
+<div><img src="terraza 4.jpeg" onclick="abrirLightbox(this)" alt="Terraza 4"></div>
+<div><img src="terraza 5.jpeg" onclick="abrirLightbox(this)" alt="Terraza 5"></div>
+<div><img src="terraza 6.jpeg" onclick="abrirLightbox(this)" alt="Terraza 6"></div>
 
 </div>
 
@@ -173,12 +173,18 @@ loading="lazy">
 <p>© 2026</p>
 </footer>
 
+<!-- LIGHTBOX 🔥 -->
+<div class="lightbox" id="lightbox">
+  <span class="cerrar">&times;</span>
+  <img class="lightbox-img" id="lightbox-img">
+</div>
+
 <!-- WHATSAPP -->
 <a href="https://wa.me/5213326041925" class="whatsapp-float" target="_blank">
 📱
 </a>
 
-<!-- SCRIPT NAVBAR SCROLL (MOVIDO ABAJO 🔥) -->
+<!-- NAVBAR SCROLL -->
 <script>
 window.addEventListener("scroll", function(){
 const navbar = document.querySelector(".navbar");
@@ -191,7 +197,28 @@ navbar.classList.remove("scrolled");
 });
 </script>
 
-<!-- SCRIPT WHATSAPP -->
+<!-- LIGHTBOX SCRIPT 🔥 -->
+<script>
+function abrirLightbox(img){
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+
+  lightbox.style.display = "flex";
+  lightboxImg.src = img.src;
+}
+
+document.querySelector(".cerrar").onclick = function(){
+  document.getElementById("lightbox").style.display = "none";
+};
+
+document.getElementById("lightbox").onclick = function(e){
+  if(e.target.id === "lightbox"){
+    this.style.display = "none";
+  }
+};
+</script>
+
+<!-- WHATSAPP -->
 <script>
 function enviarWhatsApp(){
 let nombre = document.getElementById("nombre").value;
