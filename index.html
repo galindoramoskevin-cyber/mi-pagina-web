@@ -8,23 +8,11 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 
-<script>
-window.addEventListener("scroll", function(){
-const navbar = document.querySelector(".navbar");
-
-if(window.scrollY > 50){
-navbar.classList.add("scrolled");
-}else{
-navbar.classList.remove("scrolled");
-}
-});
-</script>
-  
 <body>
 
 <!-- NAVBAR -->
 <nav class="navbar">
-  <div class="logo">Gibos</div>
+  <div class="logo">Eventos Gibos</div>
   <ul>
     <li><a href="#top">Inicio</a></li>
     <li><a href="#galeria">Galería</a></li>
@@ -44,17 +32,19 @@ navbar.classList.remove("scrolled");
   </div>
 </section>
 
-<!-- GALERIA -->
+<!-- GALERIA (CORREGIDA 🔥) -->
 <section id="galeria" class="galeria fade-up">
 <h2>Galería</h2>
 
 <div class="galeria-grid">
-<img src="terraza.jpg" alt="Terraza 1">
-<img src="terraza 2.jpeg" alt="Terraza 2">
-<img src="terraza 3.jpeg" alt="Terraza 3">
-<img src="terraza 4.jpeg" alt="Terraza 4">
-<img src="terraza 5.jpeg" alt="Terraza 5">
-<img src="terraza 6.jpeg" alt="Terraza 6">
+
+<div><img src="terraza.jpg" alt="Terraza 1"></div>
+<div><img src="terraza 2.jpeg" alt="Terraza 2"></div>
+<div><img src="terraza 3.jpeg" alt="Terraza 3"></div>
+<div><img src="terraza 4.jpeg" alt="Terraza 4"></div>
+<div><img src="terraza 5.jpeg" alt="Terraza 5"></div>
+<div><img src="terraza 6.jpeg" alt="Terraza 6"></div>
+
 </div>
 
 </section>
@@ -130,12 +120,9 @@ momentos inolvidables.
 <section id="ubicacion" class="ubicacion fade-up">
 <h2>Ubicación</h2>
 
-<p>
-Tlaquepaque, Jalisco
-</p>
+<p>Tlaquepaque, Jalisco</p>
 
 <div class="mapa">
-
 <iframe 
 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d233.44611426984986!2d-103.33138313144445!3d20.582428253574303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b2c8dfb697cb%3A0x98973efbe0dd3f8f!2sTerraza%20De%20Gibo'S!5e0!3m2!1sen!2smx!4v1773330521482!5m2!1sen!2smx"
 width="100%"
@@ -144,7 +131,6 @@ style="border:0;"
 allowfullscreen=""
 loading="lazy">
 </iframe>
-
 </div>
 
 </section>
@@ -187,15 +173,27 @@ loading="lazy">
 <p>© 2026</p>
 </footer>
 
-<!-- BOTON WHATSAPP -->
+<!-- WHATSAPP -->
 <a href="https://wa.me/5213326041925" class="whatsapp-float" target="_blank">
 📱
 </a>
 
+<!-- SCRIPT NAVBAR SCROLL (MOVIDO ABAJO 🔥) -->
+<script>
+window.addEventListener("scroll", function(){
+const navbar = document.querySelector(".navbar");
+
+if(window.scrollY > 50){
+navbar.classList.add("scrolled");
+}else{
+navbar.classList.remove("scrolled");
+}
+});
+</script>
+
 <!-- SCRIPT WHATSAPP -->
 <script>
 function enviarWhatsApp(){
-
 let nombre = document.getElementById("nombre").value;
 let telefono = document.getElementById("telefono").value;
 let email = document.getElementById("email").value;
@@ -225,12 +223,12 @@ window.open(url,"_blank");
 const elementos = document.querySelectorAll('.fade-up');
 
 function mostrarElementos(){
-  elementos.forEach(el=>{
-    const rect = el.getBoundingClientRect();
-    if(rect.top < window.innerHeight - 100){
-      el.classList.add('active');
-    }
-  });
+elementos.forEach(el=>{
+const rect = el.getBoundingClientRect();
+if(rect.top < window.innerHeight - 100){
+el.classList.add('active');
+}
+});
 }
 
 window.addEventListener('scroll', mostrarElementos);
