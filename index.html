@@ -326,10 +326,21 @@
 
   <p>📍 Tlaquepaque, Jalisco</p>
 
+  <!-- WHATSAPP PRINCIPAL -->
   <p>
-    📞 WhatsApp:
-    <a href="https://wa.me/5213347544798" target="_blank">
+    🟢 WhatsApp:
+    <a
+      href="https://wa.me/5213347544798"
+      target="_blank">
       33 4754 4798
+    </a>
+  </p>
+
+  <!-- TELÉFONO SECUNDARIO -->
+  <p>
+    📞 Teléfono secundario:
+    <a href="tel:+523326041925">
+      33 2604 1925
     </a>
   </p>
 
@@ -390,9 +401,11 @@ window.addEventListener("scroll", function () {
 
 function abrirLightbox(img) {
 
-  const lightbox = document.getElementById("lightbox");
+  const lightbox =
+    document.getElementById("lightbox");
 
-  const lightboxImg = document.getElementById("lightbox-img");
+  const lightboxImg =
+    document.getElementById("lightbox-img");
 
   lightbox.style.display = "flex";
 
@@ -403,7 +416,9 @@ function abrirLightbox(img) {
 
 document.querySelector(".cerrar").onclick = function () {
 
-  document.getElementById("lightbox").style.display = "none";
+  document
+    .getElementById("lightbox")
+    .style.display = "none";
 
 };
 
@@ -459,7 +474,7 @@ Hora: ${hora}
 Mensaje: ${mensaje}`;
 
 
-  /* NÚMERO DESTINO DE WHATSAPP */
+  /* WHATSAPP PRINCIPAL */
   let url =
     "https://wa.me/5213347544798?text="
     + encodeURIComponent(texto);
