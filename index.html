@@ -1,38 +1,21 @@
-<!DOCTYPE html> 
-<html>
+<!DOCTYPE html>
+<html lang="es">
+
 <head>
-<title>Terraza de Eventos Gibos</title>
+  <meta charset="UTF-8">
+  <title>Terraza de Eventos Gibos</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-  <script>
-function abrirLightbox(img){
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
-
-  lightbox.style.display = "flex";
-  lightboxImg.src = img.src;
-}
-
-document.querySelector(".cerrar").onclick = function(){
-  document.getElementById("lightbox").style.display = "none";
-};
-
-document.getElementById("lightbox").onclick = function(e){
-  if(e.target.id === "lightbox"){
-    this.style.display = "none";
-  }
-};
-</script>
-  
 <body>
 
 <!-- NAVBAR -->
 <nav class="navbar">
   <div class="logo">Eventos Gibos</div>
+
   <ul>
     <li><a href="#top">Inicio</a></li>
     <li><a href="#galeria">Galería</a></li>
@@ -43,216 +26,429 @@ document.getElementById("lightbox").onclick = function(e){
   </ul>
 </nav>
 
+
 <!-- HERO -->
 <section id="top" class="hero">
+
   <div class="hero-content">
+
     <h1>Terraza de Eventos Gibos</h1>
+
     <p>El espacio para momentos inolvidables</p>
-    <a href="#reserva" class="btn">Solicitar fecha</a>
+
+    <a href="#reserva" class="btn">
+      Solicitar fecha
+    </a>
+
   </div>
+
 </section>
 
-<!-- GALERIA 🔥 YA CON LIGHTBOX -->
+
+<!-- GALERÍA -->
 <section id="galeria" class="galeria fade-up">
-<h2>Galería</h2>
 
-<div class="galeria-grid">
+  <h2>Galería</h2>
 
-<div><img src="terraza.jpg" onclick="abrirLightbox(this)" alt="Terraza 1"></div>
-<div><img src="terraza 2.jpeg" onclick="abrirLightbox(this)" alt="Terraza 2"></div>
-<div><img src="terraza 3.jpeg" onclick="abrirLightbox(this)" alt="Terraza 3"></div>
-<div><img src="terraza 4.jpeg" onclick="abrirLightbox(this)" alt="Terraza 4"></div>
-<div><img src="terraza 5.jpeg" onclick="abrirLightbox(this)" alt="Terraza 5"></div>
-<div><img src="terraza 6.jpeg" onclick="abrirLightbox(this)" alt="Terraza 6"></div>
+  <div class="galeria-grid">
 
-</div>
+    <div>
+      <img src="terraza.jpg"
+           onclick="abrirLightbox(this)"
+           alt="Terraza 1">
+    </div>
+
+    <div>
+      <img src="terraza 2.jpeg"
+           onclick="abrirLightbox(this)"
+           alt="Terraza 2">
+    </div>
+
+    <div>
+      <img src="terraza 3.jpeg"
+           onclick="abrirLightbox(this)"
+           alt="Terraza 3">
+    </div>
+
+    <div>
+      <img src="terraza 4.jpeg"
+           onclick="abrirLightbox(this)"
+           alt="Terraza 4">
+    </div>
+
+    <div>
+      <img src="terraza 5.jpeg"
+           onclick="abrirLightbox(this)"
+           alt="Terraza 5">
+    </div>
+
+    <div>
+      <img src="terraza 6.jpeg"
+           onclick="abrirLightbox(this)"
+           alt="Terraza 6">
+    </div>
+
+  </div>
 
 </section>
 
-<!-- SOBRE -->
+
+<!-- SOBRE NOSOTROS -->
 <section id="sobre" class="sobre fade-up">
-<div class="sobre-container">
 
-<div class="sobre-texto">
-<h2>Sobre Nosotros</h2>
+  <div class="sobre-container">
 
-<p>
-Terraza de Eventos Gibos es un espacio íntimo y elegante diseñado para crear
-momentos inolvidables.
-</p>
+    <div class="sobre-texto">
 
-<ul class="sobre-lista">
-<li>✔ Capacidad de 50 a 150 personas</li>
-<li>✔ Ambiente elegante</li>
-<li>✔ Ubicación accesible</li>
-<li>✔ Espacio adaptable</li>
-</ul>
+      <h2>Sobre Nosotros</h2>
 
-</div>
+      <p>
+        Terraza de Eventos Gibos es un espacio íntimo y elegante diseñado
+        para crear momentos inolvidables.
+      </p>
 
-<div class="sobre-img">
-<img src="terraza 6.jpeg" alt="Terraza">
-</div>
+      <ul class="sobre-lista">
+        <li>✔ Capacidad de 50 a 150 personas</li>
+        <li>✔ Ambiente elegante</li>
+        <li>✔ Ubicación accesible</li>
+        <li>✔ Espacio adaptable</li>
+      </ul>
 
-</div>
+    </div>
+
+    <div class="sobre-img">
+      <img src="terraza 6.jpeg" alt="Terraza de Eventos Gibos">
+    </div>
+
+  </div>
+
 </section>
+
 
 <!-- CONFIANZA -->
 <section class="stats fade-up">
-<h2>Nuestro compromiso</h2>
 
-<div class="stats-grid">
-<div>+500 eventos realizados</div>
-<div>+15 años de experiencia</div>
-<div>100% clientes satisfechos</div>
-</div>
+  <h2>Nuestro compromiso</h2>
+
+  <div class="stats-grid">
+
+    <div>+500 eventos realizados</div>
+
+    <div>+15 años de experiencia</div>
+
+    <div>100% clientes satisfechos</div>
+
+  </div>
 
 </section>
+
 
 <!-- SERVICIOS -->
 <section id="extras" class="extras fade-up">
-<h2>Servicios Extras</h2>
 
-<div class="extras-grid">
-<div class="extra-card">📸 Fotografía profesional</div>
-<div class="extra-card">🍰 Barra de postres</div>
-<div class="extra-card">🎶 Música y DJ</div>
-<div class="extra-card">🎉 Decoración personalizada</div>
-<div class="extra-card">🎁 Kit de regalos</div>
-<div class="extra-card">🌸 Arreglos florales</div>
-</div>
+  <h2>Servicios Extras</h2>
+
+  <div class="extras-grid">
+
+    <div class="extra-card">
+      📸 Fotografía profesional
+    </div>
+
+    <div class="extra-card">
+      🍰 Barra de postres
+    </div>
+
+    <div class="extra-card">
+      🎶 Música y DJ
+    </div>
+
+    <div class="extra-card">
+      🎉 Decoración personalizada
+    </div>
+
+    <div class="extra-card">
+      🎁 Kit de regalos
+    </div>
+
+    <div class="extra-card">
+      🌸 Arreglos florales
+    </div>
+
+  </div>
 
 </section>
+
 
 <!-- TESTIMONIOS -->
 <section class="testimonios fade-up">
-<h2>Lo que dicen nuestros clientes</h2>
 
-<div class="test-grid">
-<div class="test-card">★★★★★<br>"Todo salió perfecto"<br>- Mariana</div>
-<div class="test-card">★★★★★<br>"Lugar hermoso y elegante"<br>- Carlos</div>
-<div class="test-card">★★★★★<br>"Excelente servicio"<br>- Mario</div>
-  <div class="test-card">★★★★★<br>"Muy bonito para todo tipo de eventos, ya he estado en bodas, cumpleaños etc. increible"<br>- Ana</div>
-  <div class="test-card">★★★★★<br>"Buen salon con sus instalaciones limpias"<br>- Fernanda</div>
-  <div class="test-card">★★★★★<br>"Cascada hermosa, exelente para fotos en familia"<br>- Karol</div>
-</div>
+  <h2>Lo que dicen nuestros clientes</h2>
+
+  <div class="test-grid">
+
+    <div class="test-card">
+      ★★★★★<br>
+      "Todo salió perfecto"<br>
+      - Mariana
+    </div>
+
+    <div class="test-card">
+      ★★★★★<br>
+      "Lugar hermoso y elegante"<br>
+      - Carlos
+    </div>
+
+    <div class="test-card">
+      ★★★★★<br>
+      "Excelente servicio"<br>
+      - Mario
+    </div>
+
+    <div class="test-card">
+      ★★★★★<br>
+      "Muy bonito para todo tipo de eventos, ya he estado en bodas,
+      cumpleaños etc. increíble"<br>
+      - Ana
+    </div>
+
+    <div class="test-card">
+      ★★★★★<br>
+      "Buen salón con sus instalaciones limpias"<br>
+      - Fernanda
+    </div>
+
+    <div class="test-card">
+      ★★★★★<br>
+      "Cascada hermosa, excelente para fotos en familia"<br>
+      - Karol
+    </div>
+
+  </div>
 
 </section>
 
-<!-- UBICACION -->
+
+<!-- UBICACIÓN -->
 <section id="ubicacion" class="ubicacion fade-up">
-<h2>Ubicación</h2>
 
-<p>Tlaquepaque, Jalisco</p>
+  <h2>Ubicación</h2>
 
-<div class="mapa">
-<iframe 
-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d233.44611426984986!2d-103.33138313144445!3d20.582428253574303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b2c8dfb697cb%3A0x98973efbe0dd3f8f!2sTerraza%20De%20Gibo'S!5e0!3m2!1sen!2smx!4v1773330521482!5m2!1sen!2smx"
-width="100%"
-height="350"
-style="border:0;"
-allowfullscreen=""
-loading="lazy">
-</iframe>
-</div>
+  <p>Tlaquepaque, Jalisco</p>
+
+  <div class="mapa">
+
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d233.44611426984986!2d-103.33138313144445!3d20.582428253574303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b2c8dfb697cb%3A0x98973efbe0dd3f8f!2sTerraza%20De%20Gibo'S!5e0!3m2!1sen!2smx!4v1773330521482!5m2!1sen!2smx"
+      width="100%"
+      height="350"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+
+  </div>
 
 </section>
+
 
 <!-- RESERVA -->
 <section id="reserva" class="reserva fade-up">
 
-<h2>Solicitar reserva</h2>
+  <h2>Solicitar reserva</h2>
 
-<form onsubmit="event.preventDefault(); enviarWhatsApp();">
+  <form onsubmit="event.preventDefault(); enviarWhatsApp();">
 
-<div class="form-group">
-<input type="text" id="nombre" placeholder="Nombre completo" required>
-<input type="tel" id="telefono" placeholder="Teléfono" required>
-</div>
+    <div class="form-group">
 
-<div class="form-group">
-<input type="email" id="email" placeholder="Email" required>
-<input type="text" id="evento" placeholder="Tipo de evento">
-</div>
+      <input
+        type="text"
+        id="nombre"
+        placeholder="Nombre completo"
+        required>
 
-<div class="form-group">
-<input type="date" id="fecha">
-<input type="time" id="hora">
-</div>
+      <input
+        type="tel"
+        id="telefono"
+        placeholder="Teléfono"
+        required>
 
-<textarea id="mensaje" placeholder="Mensaje adicional"></textarea>
+    </div>
 
-<button type="submit" class="btn">Enviar</button>
 
-</form>
+    <div class="form-group">
+
+      <input
+        type="email"
+        id="email"
+        placeholder="Email"
+        required>
+
+      <input
+        type="text"
+        id="evento"
+        placeholder="Tipo de evento">
+
+    </div>
+
+
+    <div class="form-group">
+
+      <input
+        type="date"
+        id="fecha">
+
+      <input
+        type="time"
+        id="hora">
+
+    </div>
+
+
+    <textarea
+      id="mensaje"
+      placeholder="Mensaje adicional">
+    </textarea>
+
+
+    <button type="submit" class="btn">
+      Enviar
+    </button>
+
+  </form>
 
 </section>
 
-  <!-- FOOTER -->
+
+<!-- FOOTER -->
 <footer class="footer">
-<h3>Terraza de Eventos Gibos</h3>
-<p>📍 Tlaquepaque, Jalisco</p>
-<p>📞 WhatsApp: 33 4754 4798</p>
-<p>© 2026</p>
+
+  <h3>Terraza de Eventos Gibos</h3>
+
+  <p>📍 Tlaquepaque, Jalisco</p>
+
+  <p>
+    📞 WhatsApp:
+    <a href="https://wa.me/5213347544798" target="_blank">
+      33 4754 4798
+    </a>
+  </p>
+
+  <p>© 2026</p>
+
 </footer>
 
-<!-- LIGHTBOX 🔥 -->
+
+<!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox">
+
   <span class="cerrar">&times;</span>
-  <img class="lightbox-img" id="lightbox-img">
+
+  <img
+    class="lightbox-img"
+    id="lightbox-img"
+    alt="Imagen ampliada">
+
 </div>
 
-<!-- WHATSAPP -->
-<a href="https://wa.me/5213326041925" class="whatsapp-float" target="_blank">
-📱
+
+<!-- BOTÓN FLOTANTE WHATSAPP -->
+<a
+  href="https://wa.me/5213347544798"
+  class="whatsapp-float"
+  target="_blank"
+  aria-label="Contactar por WhatsApp">
+
+  📱
+
 </a>
+
 
 <!-- NAVBAR SCROLL -->
 <script>
-window.addEventListener("scroll", function(){
-const navbar = document.querySelector(".navbar");
 
-if(window.scrollY > 50){
-navbar.classList.add("scrolled");
-}else{
-navbar.classList.remove("scrolled");
-}
+window.addEventListener("scroll", function () {
+
+  const navbar = document.querySelector(".navbar");
+
+  if (window.scrollY > 50) {
+
+    navbar.classList.add("scrolled");
+
+  } else {
+
+    navbar.classList.remove("scrolled");
+
+  }
+
 });
+
 </script>
 
-<!-- LIGHTBOX SCRIPT 🔥 -->
+
+<!-- LIGHTBOX -->
 <script>
-function abrirLightbox(img){
+
+function abrirLightbox(img) {
+
   const lightbox = document.getElementById("lightbox");
+
   const lightboxImg = document.getElementById("lightbox-img");
 
   lightbox.style.display = "flex";
+
   lightboxImg.src = img.src;
+
 }
 
-document.querySelector(".cerrar").onclick = function(){
+
+document.querySelector(".cerrar").onclick = function () {
+
   document.getElementById("lightbox").style.display = "none";
+
 };
 
-document.getElementById("lightbox").onclick = function(e){
-  if(e.target.id === "lightbox"){
+
+document.getElementById("lightbox").onclick = function (e) {
+
+  if (e.target.id === "lightbox") {
+
     this.style.display = "none";
+
   }
+
 };
+
 </script>
+
 
 <!-- WHATSAPP -->
 <script>
-function enviarWhatsApp(){
-let nombre = document.getElementById("nombre").value;
-let telefono = document.getElementById("telefono").value;
-let email = document.getElementById("email").value;
-let evento = document.getElementById("evento").value;
-let fecha = document.getElementById("fecha").value;
-let hora = document.getElementById("hora").value;
-let mensaje = document.getElementById("mensaje").value;
 
-let texto = `Hola, quiero reservar:
+function enviarWhatsApp() {
+
+  let nombre =
+    document.getElementById("nombre").value;
+
+  let telefono =
+    document.getElementById("telefono").value;
+
+  let email =
+    document.getElementById("email").value;
+
+  let evento =
+    document.getElementById("evento").value;
+
+  let fecha =
+    document.getElementById("fecha").value;
+
+  let hora =
+    document.getElementById("hora").value;
+
+  let mensaje =
+    document.getElementById("mensaje").value;
+
+
+  let texto = `Hola, quiero reservar:
 
 Nombre: ${nombre}
 Teléfono: ${telefono}
@@ -262,28 +458,57 @@ Fecha: ${fecha}
 Hora: ${hora}
 Mensaje: ${mensaje}`;
 
-let url = "https://wa.me/5213326041925?text=" + encodeURIComponent(texto);
 
-window.open(url,"_blank");
+  /* NÚMERO DESTINO DE WHATSAPP */
+  let url =
+    "https://wa.me/5213347544798?text="
+    + encodeURIComponent(texto);
+
+
+  window.open(url, "_blank");
+
 }
+
 </script>
+
 
 <!-- ANIMACIONES -->
 <script>
-const elementos = document.querySelectorAll('.fade-up');
 
-function mostrarElementos(){
-elementos.forEach(el=>{
-const rect = el.getBoundingClientRect();
-if(rect.top < window.innerHeight - 100){
-el.classList.add('active');
-}
-});
+const elementos =
+  document.querySelectorAll(".fade-up");
+
+
+function mostrarElementos() {
+
+  elementos.forEach(function (el) {
+
+    const rect =
+      el.getBoundingClientRect();
+
+    if (rect.top < window.innerHeight - 100) {
+
+      el.classList.add("active");
+
+    }
+
+  });
+
 }
 
-window.addEventListener('scroll', mostrarElementos);
-window.addEventListener('load', mostrarElementos);
+
+window.addEventListener(
+  "scroll",
+  mostrarElementos
+);
+
+window.addEventListener(
+  "load",
+  mostrarElementos
+);
+
 </script>
+
 
 </body>
 </html>
